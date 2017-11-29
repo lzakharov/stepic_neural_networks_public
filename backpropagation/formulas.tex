@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+  \begin{equation}
+    \frac{\partial J}{\partial z^l} = \delta^l
+  \end{equation}
+  \begin{equation}
+    \frac{\partial J}{\partial \Delta^l} = (W^{l + 1})^T \delta^{l + 1} = \frac{\partial J}{\partial a^l}
+  \end{equation}
+  \begin{equation}
+    \frac{\partial a^l}{\partial z^l} = \sigma(z^l) \odot (1 - \sigma(z^l))
+  \end{equation}
+  \begin{equation}
+    \frac{\partial J}{\partial z^l} = \frac{\partial J}{\partial a^l} \frac{\partial a^l}{\partial z^l} = (W^{l + 1})^T \delta^{l + 1} \odot \sigma(z^l) \odot (1 - \sigma(z^l)) = \delta^l
+  \end{equation}
+\end{document}
